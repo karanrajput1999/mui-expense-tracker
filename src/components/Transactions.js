@@ -56,7 +56,7 @@ const Transactions = () => {
         <ListItem>
           <ListItemText>Grocery</ListItemText>
           <Typography variant="h6" sx={{ color: "red" }}>
-            ₹50.00
+            ₹30.00
           </Typography>
           <IconButton edge="end" aria-label="delete">
             <DeleteIcon />
