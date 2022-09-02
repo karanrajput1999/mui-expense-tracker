@@ -1,0 +1,4 @@
+1. make an object with all the placeholder data and iterate over it and show them into journal.
+2. take values of form input and put those values into the object that we created earlier.
+3. add delete functionality.
+4. calculations for credited, debited, balance.
