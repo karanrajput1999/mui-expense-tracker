@@ -6,6 +6,8 @@ const initialState = {
     { id: 1, text: "Grocery", amount: "₹100" },
     { id: 2, text: "Milk", amount: "₹50" },
     { id: 3, text: "Recharge", amount: "₹200" },
+    { id: 4, text: "Payment", amount: "₹1000" },
+    { id: 5, text: "Salary", amount: "₹5000" },
   ],
 };
 
