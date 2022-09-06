@@ -1,10 +1,6 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 import React from "react";
-=======
-import React, { useContext } from "react";
->>>>>>> Stashed changes
 =======
 import React, { useContext } from "react";
 >>>>>>> Stashed changes
@@ -19,7 +15,6 @@ import {
   Typography,
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
-<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 
@@ -46,8 +41,6 @@ const Transactions = ({ transaction }) => {
       </ListItem>
     </Paper>
 =======
-=======
->>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 import { GlobalContext } from "../context/GlobalState";
