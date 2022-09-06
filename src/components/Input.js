@@ -8,16 +8,30 @@ const Input = () => {
   const [amount, setAmount] = useState(0);
   const { addTransaction } = useContext(GlobalContext);
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-
+  const AddIncome = () => {
     if (text === "" || amount === "") {
       alert("Please fill all the details...");
     } else {
       const newTransaction = {
         id: Math.floor(Math.random() * 100000000),
         text,
-        amount: "₹" + amount + ".00",
+        amount: amount + ".00",
+        isExpense: false,
+      };
+
+      addTransaction(newTransaction);
+    }
+  };
+
+  const AddExpense = () => {
+    if (text === "" || amount === "") {
+      alert("Please fill all the details...");
+    } else {
+      const newTransaction = {
+        id: Math.floor(Math.random() * 100000000),
+        text,
+        amount: amount + ".00",
+        isExpense: true,
       };
 
       addTransaction(newTransaction);
@@ -25,7 +39,7 @@ const Input = () => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form>
       <Paper
         sx={{
           width: "250px",
@@ -65,7 +79,8 @@ const Input = () => {
             <Button
               variant="contained"
               color="success"
-              type="submit"
+              // type="submit"
+              onClick={AddIncome}
               endIcon={<CurrencyRupeeIcon />}
               sx={{ marginTop: "20px", padding: "8px 11px" }}
             >
@@ -74,7 +89,8 @@ const Input = () => {
             <Button
               variant="contained"
               color="error"
-              type="submit"
+              // type="submit"
+              onClick={AddExpense}
               endIcon={<CurrencyRupeeIcon />}
               sx={{ marginTop: "20px", padding: "8px", marginLeft: "5px" }}
             >

@@ -1,12 +1,5 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-import React from "react";
-=======
 import React, { useContext } from "react";
->>>>>>> Stashed changes
-=======
-import React, { useContext } from "react";
->>>>>>> Stashed changes
+
 import {
   IconButton,
   ListItem,
@@ -15,34 +8,6 @@ import {
   Typography,
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-
-const Transactions = ({ transaction }) => {
-  return (
-    <Paper
-      variant="outlined"
-      sx={{
-        width: "350px",
-        height: "40px",
-        marginTop: "10px",
-        display: "flex",
-        alignItems: "center",
-      }}
-    >
-      <ListItem>
-        <ListItemText>{transaction.text}</ListItemText>
-        <Typography variant="h6" sx={{ color: "green" }}>
-          {transaction.amount}
-        </Typography>
-        <IconButton edge="end" aria-label="delete">
-          <DeleteIcon />
-        </IconButton>
-      </ListItem>
-    </Paper>
-=======
-=======
->>>>>>> Stashed changes
 import { GlobalContext } from "../context/GlobalState";
 
 const Transactions = ({ transaction }) => {
@@ -62,7 +27,10 @@ const Transactions = ({ transaction }) => {
       >
         <ListItem>
           <ListItemText>{transaction.text}</ListItemText>
-          <Typography variant="h6" sx={{ color: "green" }}>
+          <Typography
+            variant="h6"
+            sx={{ color: transaction.isExpense ? "red" : "green" }}
+          >
             {transaction.amount}
           </Typography>
           <IconButton
@@ -75,7 +43,6 @@ const Transactions = ({ transaction }) => {
         </ListItem>
       </Paper>
     </>
->>>>>>> Stashed changes
   );
 };
 

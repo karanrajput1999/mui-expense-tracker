@@ -9,7 +9,7 @@ const TransactionsList = () => {
     <div>
       <Paper
         sx={{
-          marginTop: "10px",
+          margin: "10px auto",
           width: "200px",
           height: "40px",
           display: "flex",
