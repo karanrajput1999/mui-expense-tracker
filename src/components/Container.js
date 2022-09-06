@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import React from "react";
 import Balance from "./Balance";
-import Transactions from "./Transactions";
+import TransactionsList from "./TransactionsList";
 import Input from "./Input";
 
 const Container = () => {
@@ -20,7 +20,7 @@ const Container = () => {
       }}
     >
       <Balance />
-      <Transactions />
+      <TransactionsList />
       <Input />
     </Box>
   );
