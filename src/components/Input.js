@@ -1,8 +1,31 @@
+import React, { useState, useContext } from "react";
 import { Button, Grid, Paper, TextField, Typography } from "@mui/material";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
+import { GlobalContext } from "../context/GlobalState";
+
 const Input = () => {
+  const [text, setText] = useState("");
+  const [amount, setAmount] = useState(0);
+  const { addTransaction } = useContext(GlobalContext);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    if (text === "" || amount === "") {
+      alert("Please fill all the details...");
+    } else {
+      const newTransaction = {
+        id: Math.floor(Math.random() * 100000000),
+        text,
+        amount: "₹" + amount + ".00",
+      };
+
+      addTransaction(newTransaction);
+    }
+  };
+
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <Paper
         sx={{
           width: "250px",
@@ -25,6 +48,8 @@ const Input = () => {
             id="filled-basic"
             label="Transaction Name"
             variant="filled"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
             sx={{ marginTop: "10px" }}
           />
           <TextField
@@ -32,6 +57,8 @@ const Input = () => {
             label="Amount"
             variant="filled"
             type="number"
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
             sx={{ marginTop: "20px" }}
           />
           <Grid>
