@@ -20,6 +20,8 @@ const Input = () => {
       };
 
       addTransaction(newTransaction);
+      setText("");
+      setAmount("");
     }
   };
 
@@ -35,6 +37,8 @@ const Input = () => {
       };
 
       addTransaction(newTransaction);
+      setText("");
+      setAmount("");
     }
   };
 

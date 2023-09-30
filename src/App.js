@@ -5,7 +5,15 @@ import { GlobalProvider } from "./context/GlobalState";
 function App() {
   return (
     <GlobalProvider>
-      <div>
+      <div
+        style={{
+          width: "97%",
+          display: "flex",
+          justifyContent: "center",
+          marginInline: "auto",
+        }}
+        className="main-container"
+      >
         <Container />
       </div>
     </GlobalProvider>

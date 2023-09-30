@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 400px;
+  height: auto;
+  margin: 50px auto;
+  padding-bottom: 30px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid black;
+}
